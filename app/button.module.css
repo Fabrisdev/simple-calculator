@@ -1,0 +1,36 @@
+.button{
+    width: 65px;
+    aspect-ratio: 1;
+    background-color: #FE5F55;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 20px;
+    position: relative;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    color: #fff;
+}
+
+.button::after{
+    content: '';
+    position: absolute;
+    width: 65px;
+    aspect-ratio: 1;
+    top: 5px;
+    background-color: #9c2921;
+    z-index: -1;
+    border: 1px solid #000;   
+}
+
+
+.button:focus, .button:active{
+    top: 10px;
+}
+
+.button:focus::after, .button:active::after{
+    display: none;
+}
